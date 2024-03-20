@@ -7,7 +7,12 @@
     "dev": "node --import tsx --env-file=.env ./src/index.ts",
     "build": "tsc src/index.ts",
     "start": "node --env-file=.env dist/index.js",
-    "check": "biome check --apply ./src"
+    "check": "biome check --apply ./src",
+    "migrate": "drizzle-kit generate:mysql",
+    "introspect  ": "drizzle-kit pull:mysql",
+    "prototype": "drizzle-kit push:mysql",
+    "seed": "node --import tsx --env-file=.env ./src/db/seed.ts",
+    "studio": "drizzle-kit studio --port 4000 --verbose"
   },
   "keywords": [],
   "author": "",
